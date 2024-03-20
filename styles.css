@@ -322,12 +322,14 @@ hr {
     margin-bottom: 10px;
     text-align: center;
 }
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .hero .section-title {
         text-align: justify;
         width: 260px;
     }
 }
+
 .section-title {
     text-align: center;
 }
@@ -435,7 +437,7 @@ hr {
 #services,
 #projects,
 #contact {
-    padding: 15px;
+    padding: 15p;
 }
 
 #services {
@@ -479,20 +481,20 @@ hr {
 .all-projects {
     display: grid;
     grid-template-columns: repeat(4, 250px);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: repeat(1, 250px);
     grid-gap: 10px;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
+    /* background-color: greenyellow; */
 
 }
 
 .project-item {
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    /* background-color: rgb(25, 118, 210); */
-
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px auto;
     box-shadow: 0px 0px 2px 2px #0000002c;
     border-radius: 7px;
     /* background-color: #0000002c; */
@@ -562,66 +564,50 @@ hr {
     overflow: hidden;
     grid-template-columns: repeat(3, 250px);
     grid-template-rows: repeat(3, 250px);
-    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-template-rows: repeat(auto-fill,minmax(200px, 1fr)); */
-    grid-gap: 5px;
+  
 }
 
-.item {
-    background-color: #fff;
-    background-color: red;
-}
 
-#contact {
-    padding: 0;
-    /* padding: 15px; */
-}
-
-#contact .contact {
-    padding: 15px;
-    background-color: #fff;
-    font-size: .6rem;
-
-}
-
-.contact .contact-item {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 2px 0 #495057;
-    border-radius: 7px;
-
-}
-
-.contact-item .contact-items {
+#contact .contact-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(2, 300px));
-    grid-template-rows: repeat(auto-fill, minmax(2, 300px));
-    overflow: hidden;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(1, auto);
     justify-content: center;
-    grid-gap: 15px;
-    /* padding: 15px; */
+    /* background-color: red; */
+    padding: 20px;
+
+
+
 }
 
 .contact .contact-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2px;
+    height: auto;
+    height: 120px;
+    padding: 13px;
+    margin: 10px;
+    box-shadow: 0 0 2px 0 #495057;
+    border-radius: 7px;
+    background-color: #6610f2;
+    background-color: #fff;
 
 }
 
 .contact-item h1 {
     color: brown;
+    color: crimson;
     font-weight: 400;
 }
 
 .contact-item h2 {
     /* color: brown; */
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .contact-item .icon img {
-    width: 50px;
+    width: 40px;
 }
 
 #footer {
@@ -629,7 +615,7 @@ hr {
     color: #dee2e6;
     background-color: var(--bs-dark);
     font-weight: 50;
-    
+
 }
 
 #footer .footer {
@@ -649,12 +635,14 @@ h2 {
     color: crimson;
     font-weight: 50;
 }
+
 @media screen and (min-width: 320px) and (max-width:768px) {
-    #footer .footer{
+    #footer .footer {
         font-size: .6rem;
         /* background-color: #fff; */
     }
 }
+
 .social-icon {
     display: flex;
 }
@@ -673,8 +661,11 @@ h2 {
 
     .all-projects {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
-
+        grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+        width: 100%;
 
     }
 
@@ -690,11 +681,14 @@ h2 {
         padding: 8px 30px;
     }
 
-    .contact-items {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(2, 300px));
-        grid-template-rows: repeat(auto-fill, minmax(2, 120px));
-
+    #contact .contact-items {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+       justify-content: center;
+    }
+    #contact .contact-item{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
     }
 
 
@@ -703,7 +697,7 @@ h2 {
 
 
 /* Media Query For Desktop */
-@media only screen and (min-width: 1024px) {
+@media only screen and (minwidth: 1024px) {
 
     /* header */
     #header .hamburger {
