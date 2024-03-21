@@ -610,11 +610,12 @@ h3 span{
 
 .awards-items .awards-item {
     display: flex;
+    align-items: center;
+    
     padding: 10px;
     margin: 10px 0;
     gap: 20px;
     background-color: #fff;
-    /* border: 1px solid red; */
     border-radius: 5px;
     box-shadow: 0 0 2px 0 #495057;
     /* z-index: 100; */
@@ -623,6 +624,8 @@ h3 span{
 
 .awards-items .awards-item .certs img {
     width: 250px;
+    align-items: center;
+    text-align: center;
 }
 
 /* .awards-items .awards-item .text{
